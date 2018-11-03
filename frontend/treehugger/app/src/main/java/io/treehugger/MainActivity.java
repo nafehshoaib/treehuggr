@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void register(View view) {
 
-        Intent i = new Intent(MainActivity.this, RegisterActivity.class);
+        Intent i = new Intent(MainActivity.this, TreeTrackerActivity.class);
         startActivity(i);
     }
 

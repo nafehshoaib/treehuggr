@@ -2,12 +2,15 @@ package io.treehugger.mock_data;
 
 
 import java.util.ArrayList;
+import java.util.List;
+
+import lecho.lib.hellocharts.model.PointValue;
 
 public class Mock {
-	public static ArrayList<Tuple<Double, Double>> stressValues = new ArrayList();
+	public static List<PointValue> stressValues = new ArrayList<>();
 	public static void init() {
-		for (double i = 0; i < 20; i++) {
-			stressValues.add(new Tuple<Double, Double>(i, Math.random()));
+		for (float i = 0; i < 25; i++) {
+			stressValues.add(new PointValue(i, (float)Math.random()));
 		}
 	}
 }

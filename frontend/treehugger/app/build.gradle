@@ -17,11 +17,7 @@ android {
         }
     }
 }
-repositories {
-    maven {
-        url "https://jitpack.io"
-    }
-}
+
 
 
 dependencies {
@@ -34,8 +30,6 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
     implementation 'com.google.android.gms:play-services-maps:16.0.0'
-    implementation 'com.github.lecho:hellocharts-library:1.5.8@aar'
     implementation 'com.github.lecho:hellocharts-android:v1.5.8'
-
 
 }
