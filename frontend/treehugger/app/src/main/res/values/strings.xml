@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">treehugger</string>
     <string name="title_activity_register_device">RegisterDeviceActivity</string>
+    <string name="title_activity_map_view">Map</string>
 </resources>
