@@ -16,11 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".RegisterActivity" />
         <activity android:name=".TreeTrackerActivity" />
-        <activity
-            android:name=".RegisterDeviceActivity"
-            android:label="@string/title_activity_register_device"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity android:name=".DonateActivity" />
+        <activity android:name=".TreeCountActivity"></activity>
     </application>
 
 </manifest>
