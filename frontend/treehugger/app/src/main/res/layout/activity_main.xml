@@ -8,62 +8,59 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="54dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="422dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="124dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo" />
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
+        android:layout_width="507dp"
         android:layout_height="1374dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.274"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/rainforest_background" />
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="323dp"
+        android:layout_height="55dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.181"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.222"
+        app:layout_constraintVertical_bias="0.312"
         app:srcCompat="@drawable/donate_button" />
 
     <Button
         android:id="@+id/buttonRegister"
+        style="@android:style/Widget.Material.Button.Borderless"
         android:layout_width="297dp"
         android:layout_height="60dp"
-        android:text="Button"
         android:onClick="register"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageView5"
-        app:layout_constraintHorizontal_bias="0.499"
-        app:layout_constraintStart_toEndOf="@+id/imageView5"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.39" />
+        app:layout_constraintVertical_bias="0.471"
+        tools:layout_editor_absoluteX="71dp" />
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="318dp"
+        android:layout_height="46dp"
         app:layout_constraintBottom_toTopOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.225"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="0.664"
+        app:layout_constraintVertical_bias="0.757"
         app:srcCompat="@drawable/register_button" />
 
 </android.support.constraint.ConstraintLayout>
