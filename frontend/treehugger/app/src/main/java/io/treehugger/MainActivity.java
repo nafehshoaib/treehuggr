@@ -18,8 +18,7 @@ public class MainActivity extends AppCompatActivity {
         getWindow().getDecorView().setBackgroundColor(Color.WHITE);
     }
 
-    public void register(View view)
-    {
+    public void register(View view) {
 
         Intent i = new Intent(MainActivity.this, RegisterActivity.class);
         startActivity(i);
