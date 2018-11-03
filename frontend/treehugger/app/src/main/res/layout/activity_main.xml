@@ -43,13 +43,28 @@
     <Button
         android:id="@+id/buttonRegister"
         style="@android:style/Widget.Material.Button.Borderless"
-        android:layout_width="297dp"
-        android:layout_height="60dp"
+        android:layout_width="282dp"
+        android:layout_height="47dp"
         android:onClick="register"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageView5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageView5"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.471"
-        tools:layout_editor_absoluteX="71dp" />
+        app:layout_constraintVertical_bias="0.433" />
+
+    <Button
+        android:id="@+id/buttonTreeCount"
+        style="@android:style/Widget.Material.Button.Borderless"
+        android:layout_width="282dp"
+        android:layout_height="47dp"
+        android:onClick="treecount"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageView4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.32" />
 
     <ImageView
         android:id="@+id/imageView5"
