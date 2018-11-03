@@ -26,4 +26,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public void treecount(View view)
+    {
+
+        Intent i = new Intent(MainActivity.this, TreeCountActivity.class);
+        startActivity(i);
+    }
+
 }
