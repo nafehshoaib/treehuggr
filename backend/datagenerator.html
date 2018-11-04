@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+   <head>
+     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCc8PmvlqMijDzG2RDTUPiNMbBXU0iivZM&callback=initMap" type="text/javascript"></script>
+       <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+       <script>
+           var map;
+
+           function initialize() {
+               var mapOptions = {
+                   zoom: 12,
+                   center: new google.maps.LatLng(33.397, -81.644),
+                   mapTypeId: google.maps.MapTypeId.ROADMAP
+               };
+               map = new google.maps.Map(document.getElementById('map_canvas'),
+                   mapOptions
+               );
+               google.maps.event.addListener(map, 'click', function(event) {
+                   document.getElementById('latMap').value = event.latLng.lat();
+                   document.getElementById('lngMap').value = event.latLng.lng();
+               });
+           }
+           function mapDivClicked (event) {
+               var target = document.getElementById('map_canvas'),
+                   posx = event.pageX - target.offsetLeft,
+                   posy = event.pageY - target.offsetTop,
+                   bounds = map.getBounds(),
+                   neLatlng = bounds.getNorthEast(),
+                   swLatlng = bounds.getSouthWest(),
+                   startLat = neLatlng.lat(),
+                   endLng = neLatlng.lng(),
+                   endLat = swLatlng.lat(),
+                   startLng = swLatlng.lng();
+
+                   console.log(startLng)
+                   var responseJSON;
+
+                   const http = new XMLHttpRequest();
+                   //const url = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + startLat + ',' + startLng + '&key=AIzaSyCc8PmvlqMijDzG2RDTUPiNMbBXU0iivZM';
+                   const url = 'http://api.geonames.org/findNearbyJSON?lat=' + startLat + '&lng=' + startLng + '&username=isaiahb';
+
+                   http.open('GET', url);
+                   http.send();
+
+                   http.onreadystatechange = function () {
+                     if (this.readyState == 4 && this.status == 200) {
+                       var dataObject = [];
+                       responseJSON = http.responseText;
+                       var responseObj = JSON.parse(responseJSON));
+                       for (var g in responseObj) {
+                         if (!responseObj.hasOwnProperty(g)) continue;
+
+                         var geonmames = responseObj[g];
+                         var geoname = geonames[0];
+                         for (var key in geoname) {
+                           if (!geoname.hasOwnProperty(key)) continue;
+                           switch (key) {
+                             case "lat":
+
+                               break;
+                             case "lng":
+
+                               break;
+                             case "fcl":
+
+                               break;
+                             case "fcode":
+
+                               break;
+                             default:
+                               continue;
+                               break;
+                           }
+                           var resultObject = geoname[key]
+
+                         }
+                         dataObject.append()
+                       }
+                     }
+                   }
+
+               document.getElementById('posX').value = posx;
+               document.getElementById('posY').value = posy;
+               document.getElementById('lat').value = startLat + ((posy/350) * (endLat - startLat));
+               document.getElementById('lng').value = startLng + ((posx/500) * (endLng - startLng));
+               console.log(document.getElementById("output").value)
+           }
+
+           function locationIsOkay(fcl, fcode) {
+             var okayFCL = ['H'];
+             var okayCode = ['OCN'];
+           }
+           google.maps.event.addDomListener(window, 'load', initialize);
+       </script>
+   </head>
+   <body>
+       <div id="map_canvas" onclick="mapDivClicked(event);" style="height: 350px; width: 500px;"></div>
+       x: <input id="posX" />
+       y: <input id="posY" />
+       lat: <input id="lat" />
+       lng: <input id="lng" />
+       <div />
+       lat from map: <input id="latMap" />
+       lng from map: <input id="lngMap" />
+       Output: <input id="output"/>
+   </body>
+</html>
