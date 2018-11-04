@@ -1,30 +1,13 @@
+#!/usr/bin/python 
+import serial 
+import requests
+ser = serial.Serial('/dev/tty96B0', 9600)
+API_ENDPOINT = "https://mediquix.lib.id/treehuggrmaps@dev"
 
-# importing the requests library 
-import requests 
-  
-# defining the api-endpoint  
-API_ENDPOINT = "https://www.mocky.io/v2/5185415ba171ea3a00704eed"
-  
-# your API key here 
-#API_KEY = "XXXXXXXXXXXXXXXXX"
-  
-# your source code here 
-source_code = "test"
-''' 
-print("Hello, world!") 
-a = 1 
-b = 2 
-print(a + b) 
-'''
-  
-# data to be sent to api 
-data = {'api_option':'paste', 
-        'api_paste_code':source_code, 
-        'api_paste_format':'python'} 
-  
-# sending post request and saving response as response object 
-r = requests.post(url = API_ENDPOINT, data = data) 
-  
-# extracting response text  
-pastebin_url = r.text 
-print("The pastebin URL is:%s"%pastebin_url) 
+#source_code = ser.readline()
+source_code = "testing this"
+print("read line from serial: ", source_code)
+data = {'data':source_code, 'lat':32, 'long':35}
+r = requests.post(url = API_ENDPOINT, data = data)
+pastebin_url = r.text
+print("url is: ", pastebin_url)
